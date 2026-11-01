@@ -15,7 +15,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { authClient } from "@/lib/auth-client";
 import { getTokenFromClient } from "@/lib/getTokenFromClient";
 
 const categories = ["Beach", "Mountain", "City", "Adventure", "Cultural"];

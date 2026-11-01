@@ -14,8 +14,6 @@ import {
 import { Destination } from "@/app/Types/type";
 import BookingCard from "@/components/booking/BookingCard";
 import { formatDate } from "@/lib/utils/formatData";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
 import { getTokenFromServer } from "@/lib/getTokenFormServer";
 
 export async function generateMetadata({
@@ -23,9 +21,12 @@ export async function generateMetadata({
 }: PageProps<"/destinations/[id]">): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`http://localhost:8000/destination/${id}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/destination/${id}`,
+      {
+        cache: "no-store",
+      },
+    );
     if (res.ok) {
       const destination: Destination | null = await res.json();
       if (destination?.name) {

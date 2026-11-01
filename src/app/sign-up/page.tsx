@@ -113,7 +113,7 @@ export default function SignUpPage() {
                   </Button>
                 </Field>
 
-                <FieldSeparator className="text-xs text-gray-400 [&_[data-slot=field-separator-content]]:bg-white">
+                <FieldSeparator className="text-xs text-gray-400 **:data-[slot=field-separator-content]:bg-white">
                   OR SIGN UP WITH EMAIL
                 </FieldSeparator>
 

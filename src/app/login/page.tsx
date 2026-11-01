@@ -86,7 +86,7 @@ export default function LoginPage() {
           <CardContent className="px-6 pb-8 sm:px-8">
             <form onSubmit={handleEmailLogin}>
               <FieldGroup className="gap-5">
-                <FieldSeparator className="text-xs text-gray-400 [&_[data-slot=field-separator-content]]:bg-white">
+                <FieldSeparator className="text-xs text-gray-400 **:data-[slot=field-separator-content]:bg-white">
                   SIGN IN WITH EMAIL
                 </FieldSeparator>
 
